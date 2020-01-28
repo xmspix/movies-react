@@ -1,0 +1,19 @@
+.btn-sm-red {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: $red;
+  color: $white;
+  border: 0;
+  font-size: 1.4rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

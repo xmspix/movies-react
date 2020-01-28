@@ -1,0 +1,61 @@
+@mixin centerScreen {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  font-size: 1.4rem;
+  color: $grey-light;
+  transform: translate(-50%, -50%);
+}
+
+@mixin imageCover {
+  height: 30rem;
+  width: 20rem;
+  object-fit: cover;
+}
+
+/*
+  Mobile S : 320px = 20rem
+  Mobile M : 375px = 23.43rem
+  Mobile L : 425px = 26.56rem
+  Tablet : 768px = 48rem
+  Laptop : 1024px  = 64rem
+  Laprop L : 1440px = 90rem
+  4K : 2560px = 160rem
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == PhoneS {
+    @media only screen and (max-width: 20em) {
+      @content;
+    }
+  }
+  @if $breakpoint == PhoneM {
+    @media only screen and (max-width: 23.4375em) {
+      @content;
+    }
+  }
+  @if $breakpoint == PhoneM_Portrait {
+    @media only screen and (max-width: 50.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == PhoneL {
+    @media only screen and (max-width: 26.5625em) {
+      @content;
+    }
+  }
+  @if $breakpoint == Tablet {
+    @media only screen and (max-width: 40.62em) {
+      @content;
+    }
+  }
+  @if $breakpoint == Monitor {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint == MonitorL {
+    @media only screen and (max-width: 64em) {
+      @content;
+    }
+  }
+}

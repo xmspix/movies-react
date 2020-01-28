@@ -1,0 +1,24 @@
+.main-section {
+  background-color: $main-section;
+  position: relative;
+  flex: 1;
+
+  .topbar {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: $grey-dark-2;
+    box-shadow: 0 0.2rem 1.4rem -0.6rem #000;
+
+    .menu {
+      cursor: pointer;
+    }
+  }
+
+  .movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+  }
+}

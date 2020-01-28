@@ -1,0 +1,18 @@
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./base/typography";
+@import "./base/animations";
+@import "./base/base";
+
+@import "./components/buttons";
+@import "./components/icons";
+@import "./components/search";
+@import "./components/notification";
+@import "./components/movie-card";
+@import "./components/spinner";
+
+@import "./layout/container";
+@import "./layout/sidebar";
+@import "./layout/main-section";
+@import "./layout/movie-page";

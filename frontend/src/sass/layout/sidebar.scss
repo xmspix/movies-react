@@ -1,0 +1,106 @@
+.sidebar {
+  flex: 0 0 21%;
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-dark;
+  transition: all 0.2s;
+  overflow: hidden;
+
+  &__user-profile {
+    display: flex;
+    padding: 2rem;
+    background-color: $red;
+
+    &--image {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    padding-left: 1rem;
+
+    &--name {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    &--status {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__links {
+    min-height: 100vh;
+
+    ul {
+      padding: 4rem;
+    }
+
+    &--item {
+      padding: 1rem;
+      list-style: none;
+      line-height: 3rem;
+    }
+
+    &--icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      margin-right: 2rem;
+      fill: currentColor;
+    }
+
+    &--link {
+      color: $grey-light;
+      text-decoration: none;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s;
+
+      &:visited,
+      &:active {
+        color: $grey-light;
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.active {
+  @include respond(MonitorL) {
+    flex: 0 0 30%;
+  }
+
+  @include respond(Monitor) {
+    flex: 0 0 35%;
+  }
+
+  @include respond(Tablet) {
+    flex: 0 0 40%;
+  }
+
+  @include respond(PhoneL) {
+    flex: 1 0 90%;
+  }
+
+  @include respond(PhoneM) {
+    flex: 1 0 90%;
+  }
+
+  @include respond(PhoneS) {
+    flex: 1 0 88%;
+  }
+}
+
+.hide {
+  flex: 0;
+  width: 0;
+}

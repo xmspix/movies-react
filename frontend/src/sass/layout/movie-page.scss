@@ -1,0 +1,71 @@
+.movie-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  &__header {
+    position: relative;
+    display: flex;
+    padding: 3rem;
+    align-items: center;
+
+    @media only screen and (max-width: 40.62em) {
+      flex-direction: column;
+    }
+
+    &--poster {
+      width: 20rem;
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+
+      &-title {
+        display: flex;
+        @media only screen and (max-width: 23.4375em) {
+          flex-direction: column;
+        }
+
+        h1 {
+          flex: 1;
+        }
+
+        &--icon {
+          width: 2rem;
+          height: 2rem;
+          margin-right: 2rem;
+          fill: currentColor;
+          cursor: pointer;
+          transition: all 1s;
+
+          &:hover {
+            fill: $red;
+            transform: scale(1.6);
+          }
+        }
+
+        .icon-active {
+          fill: $red;
+        }
+      }
+    }
+
+    &--description {
+      font-size: 1.4rem;
+      padding-top: 4rem;
+    }
+  }
+
+  &__trailer {
+    position: relative;
+    display: flex;
+    padding: 3rem;
+
+    #backgroundvid {
+      width: 100%;
+    }
+  }
+}
