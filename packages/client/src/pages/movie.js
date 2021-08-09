@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import context from "../utils/context";
 import Spinner from "../components/spinner";
+import svg from "../resources/sprite.svg"
 
 const Movie = ({ match: { params } }) => {
   const globalState = useContext(context);
@@ -11,7 +12,7 @@ const Movie = ({ match: { params } }) => {
     let isCancelled = false;
 
     setState(false);
-    fetch("/api/movie/" + params.id)
+    fetch("http://localhost:3001/api/movie/" + params.id)
       .then(res => res.json())
       .then(data => {
         setState(data);
@@ -68,9 +69,8 @@ const Movie = ({ match: { params } }) => {
             <div className="movie-container__header--info-title">
               <h1>{state.Title}</h1>
               <svg
-                className={`movie-container__header--info-title--icon ${
-                  isCollected ? "icon-active" : null
-                }`}
+                className={`movie-container__header--info-title--icon ${isCollected ? "icon-active" : null
+                  }`}
                 onClick={() =>
                   !isCollected ? globalState.addToCollection(state) : null
                 }
@@ -78,9 +78,9 @@ const Movie = ({ match: { params } }) => {
                 onMouseLeave={() => setHover(false)}
               >
                 {hover || isCollected ? (
-                  <use xlinkHref="/public/img/sprite.svg#icon-heart-full"></use>
+                  <use xlinkHref={svg + "#icon-heart-full"}></use>
                 ) : (
-                  <use xlinkHref="/public/img/sprite.svg#icon-heart-empty"></use>
+                  <use xlinkHref={svg + "#icon-heart-empty"}></use>
                 )}
               </svg>
             </div>

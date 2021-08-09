@@ -13,7 +13,6 @@ api.get("/movies", (req, res) => {
   getMovieList(url).then(data => {
     res.send(data);
   });
-  // res.send(require("../demo/top-movies")); // for testing
 });
 
 // Movies list - Trending
@@ -34,7 +33,6 @@ api.get("/movie/:titleID", (req, res) => {
   movieFullInfo(req.params.titleID).then(data => {
     res.send(data);
   });
-  // res.send(require("../demo/movie-page")); // for testing
 });
 
 module.exports = api;

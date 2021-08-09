@@ -6,7 +6,7 @@ const Search = () => {
   const searchBox = useRef();
 
   const handleSearch = () => {
-    fetch("/api/suggestions/" + searchBox.current.value)
+    fetch("http://localhost:3001/api/suggestions/" + searchBox.current.value)
       .then(res => res.json())
       .then(data => {
         setState(data);

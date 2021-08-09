@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     let isCancelled = false;
 
-    fetch("/api/movies")
+    fetch("http://localhost:3001/api/movies")
       .then(res => res.json())
       .then(data => {
         setState({ ...state, movies: data, isLoaded: true });

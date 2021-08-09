@@ -1,7 +1,7 @@
-# Movie Project - React & Webpack4
+# Movie app - React
 
 This is a nice looking app that using information from imdb.com
 
-Live Demo : http://xmspix-movies.dynu.net/
+Live Demo : https://mark-stoler-movies-app.herokuapp.com/
 
-![Movie Project - React & Webpack4](https://media.giphy.com/media/Vhi3mONqdHE05RDGeU/giphy.gif)
+![Movie app - React](https://media.giphy.com/media/Vhi3mONqdHE05RDGeU/giphy.gif)

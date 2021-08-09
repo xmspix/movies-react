@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import context from "../utils/context";
+import profilePic from "../resources/me.png"
+import svg from "../resources/sprite.svg"
 
 const SideBar = () => {
   const globalState = useContext(context);
@@ -51,8 +53,8 @@ const SideBar = () => {
     <div className={globalState.menu ? "sidebar active" : "sidebar hide"}>
       <div className="sidebar__user-profile">
         <img
-          src="/public/img/me.png"
-          alt="profile photo"
+          src={profilePic}
+          alt="Mark Stoler"
           className="sidebar__user-profile--image"
         />
         <div className="sidebar__user-info">
@@ -66,7 +68,7 @@ const SideBar = () => {
             <li className="sidebar__links--item" key={x}>
               <NavLink to={itm.link} className="sidebar__links--link">
                 <svg className="sidebar__links--icon">
-                  <use xlinkHref={`/public/img/sprite.svg#${itm.icon}`}></use>
+                  <use xlinkHref={svg + '#' + itm.icon}></use>
                 </svg>
                 <span>{itm.text}</span>
                 {itm.notification && <Notification />}

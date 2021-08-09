@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import context from "../utils/context";
+import svg from "../resources/sprite.svg"
 
 const Menu = () => {
   const globalState = useContext(context);
@@ -10,7 +11,7 @@ const Menu = () => {
       onClick={() => globalState.toggleMenu()}
       htmlFor="navi-toggle"
     >
-      <use xlinkHref="/public/img/sprite.svg#icon-menu"></use>
+      <use xlinkHref={svg + "#icon-menu"}></use>
     </svg>
   );
 };

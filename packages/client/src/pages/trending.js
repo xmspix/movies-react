@@ -12,7 +12,7 @@ const Tranding = () => {
   useEffect(() => {
     let isCancelled = false;
 
-    fetch("/api/trending")
+    fetch("http://localhost:3001/api/trending")
       .then(res => res.json())
       .then(data => {
         setState({ ...state, movies: data, isLoaded: true });
